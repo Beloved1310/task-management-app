@@ -1,0 +1,25 @@
+<!-- templates/task_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-lg mx-auto bg-white p-2 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-2">{{ form.instance.pk|yesno:"Edit Task,Add Task" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="space-y-1">
+            {{ form.title }}
+            {{ form.description }}
+            {{ form.status }}
+            {{ form.priority }}
+            {{ form.due_date }}
+            {{ form.category }}
+            {{ form.assigned_to }}
+        </div>
+        <div class="flex justify-end mt-6">
+            <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                Save
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
