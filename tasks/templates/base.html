@@ -11,16 +11,28 @@
 <body class="bg-gradient-to-br from-blue-100 to-blue-300">
     <div class="container flex mx-12 my-12 rounded-xl h-screen overflow-hidden bg-white">
         <!-- Sidebar -->
-        <div class="w-1/5 bg-white p-6">
-            <div class="text-2xl font-bold mb-8">Tasky</div>
+        <div class="w-1/5 bg-gray-200 p-6 border-r border-gray-300">
+            <div class="text-2xl font-bold mb-8">
+                <i class="fas fa-tasks"></i> Tasky
+            </div>
             <nav class="space-y-6">
-                <a href="{% url 'task_list' %}" class="block text-blue-500 font-medium">Dashboard</a>
-                <a href="#" class="block text-gray-600">Tasks</a>
-                <a href="#" class="block text-gray-600">Calendar</a>
-                <a href="#" class="block text-gray-600">Members</a>
+                <a href="{% url 'task_list' %}" class="block text-white font-medium bg-purple-700 border-l-4 border-blue-500 rounded-r-lg px-2 py-1">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="#" class="block text-gray-600">
+                    <i class="fas fa-tasks"></i> Tasks
+                </a>
+                <a href="#" class="block text-gray-600">
+                    <i class="fas fa-calendar-alt"></i> Calendar
+                </a>
+                <a href="#" class="block text-gray-600">
+                    <i class="fas fa-users"></i> Members
+                </a>
             </nav>
-            <div class="mt-16">
-                <button class="bg-purple-500 text-white px-4 py-2 rounded-lg w-full">Upgrade to Pro</button>
+            <div class="mt-80">
+                <button class="bg-purple-700 text-white px-4 py-7 rounded-lg w-full">
+                    <i class="fas fa-arrow-up"></i> Upgrade to Pro
+                </button>
             </div>
         </div>
         <!-- Main Content -->
